@@ -1,0 +1,55 @@
+
+Gamificacao
+____________________________________________
+
+Usuario
+# String nome
+# String senha
+# LocalDate dataCadastro = LocalDate.now()
+# String diretoria
+
++ verHistoricoAprovacoes() : void
++ verClassificacao() : void
++ logout() : void
+
+--------------------------------------------
+
+	Diretor
+	+ cadastrarUsuario() : void
+	+ excluirUsuario() : void
+	+ cadastrarAtividade() : void
+	+ excluirAtividade() : void
+	+ verSolicitacoesAbertas() : void
+	+ processarSolicitacao() : void
+	+ verMeusProcessos() : void
+
+--------------------------------------------
+
+	Membro
+	+ iniciarSolicitaocao() : void
+	+ verMinhasSolicitacoes() : void
+
+____________________________________________
+
+Atividade
+- int valor
+- String descricao
+
+____________________________________________
+
+Solicitacao
+- Atividade atividade
+- LocalDate dataSolicitacao
+- int valorSugestao
+- Boolean situacao = null
+- Membro autor
+- Diretor diretorResponsavel = null
+
+____________________________________________
+
+Sistema
+- ArrayList<Usuario> usuarios
+- ArrayList<Atividade> atividades
+- ArrayList<Solicitacao> solicitacoes
+
+____________________________________________
