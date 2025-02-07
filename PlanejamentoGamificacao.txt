@@ -1,6 +1,6 @@
 
 Gamificacao
-____________________________________________
+______________________________________________________
 
 Usuario
 # String nome
@@ -12,7 +12,7 @@ Usuario
 + verClassificacao() : void
 + logout() : void
 
---------------------------------------------
+------------------------------------------------------
 
 	Diretor
 	+ cadastrarUsuario() : void
@@ -23,33 +23,98 @@ Usuario
 	+ processarSolicitacao() : void
 	+ verMeusProcessos() : void
 
---------------------------------------------
+------------------------------------------------------
 
 	Membro
 	+ iniciarSolicitaocao() : void
 	+ verMinhasSolicitacoes() : void
 
-____________________________________________
+______________________________________________________
 
 Atividade
 - int valor
 - String descricao
 
-____________________________________________
+______________________________________________________
 
 Solicitacao
+- Membro autor
 - Atividade atividade
 - LocalDate dataSolicitacao
 - int valorSugestao
 - Boolean situacao = null
-- Membro autor
 - Diretor diretorResponsavel = null
 
-____________________________________________
+______________________________________________________
 
 Sistema
 - ArrayList<Usuario> usuarios
 - ArrayList<Atividade> atividades
 - ArrayList<Solicitacao> solicitacoes
+- Usuario usuarioAtivo = null
 
-____________________________________________
+______________________________________________________
+
+Gamificacao 2
+______________________________________________________
+
+Usuario
+# String nome
+# String senha
+# LocalDate dataCadastro = LocalDate.now()
+# String diretoria
+
++ menu() : void {abstract}
+
+------------------------------------------------------
+
+	Diretor
+	+ menu() : void
+
+------------------------------------------------------
+
+	Membro
+	+menu() : void
+
+______________________________________________________
+
+Atividade
+- int valor
+- String descricao
+
+______________________________________________________
+
+Solicitacao
+- Membro autor
+- Atividade atividade
+- LocalDate dataSolicitacao
+- int valorSugestao
+- Boolean situacao = null
+- Diretor diretorResponsavel = null
+
+______________________________________________________
+
+Sistema
+- ArrayList<Usuario> usuarios
+- ArrayList<Atividade> atividades
+- ArrayList<Solicitacao> solicitacoes
+- Usuario usuarioAtivo = null
+
++ verHistoricoPessoal() : void (aprovados e negados)
++ verHistoricoGeral() : void (apenas aprovados)
+
++ verClassificacao() : void
+
++ verSolicitacoesAbertas() : void
++ processarSolicitacao() : void
+
++ iniciarSolicitacao() : void
+
++ cadastrarUsuario() : void
++ excluirUsuario() : void
+
++ cadastrarAtividade() : void
++ excluirAtividade() : void
+
++ login() : void
++ logout() : void
