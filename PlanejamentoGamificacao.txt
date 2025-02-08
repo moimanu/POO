@@ -74,7 +74,7 @@ Usuario
 ------------------------------------------------------
 
 	Membro
-	+menu() : void
+	+ menu() : void
 
 ______________________________________________________
 
@@ -89,7 +89,7 @@ Solicitacao
 - Atividade atividade
 - LocalDate dataSolicitacao
 - int valorSugestao
-- Boolean situacao = null
+- int situacao
 - Diretor diretorResponsavel = null
 
 ______________________________________________________
@@ -118,3 +118,23 @@ Sistema
 
 + login() : void
 + logout() : void
+
+______________________________________________________
+
+Como será o formato de dados para os usuários?
+
+int  Str  Str   Str   LocalDate  Str
+tipo,nome,senha,email,0000-00-00,diretoria
+
+______________________________________________________
+
+Como será o formato de dados para as atividades?
+
+Str   Str
+valor/descricao
+
+______________________________________________________
+
+Como será o formato de dados para as solicitacoes?
+
+nomeAutor,tituloAtividade,0000-00-00,valor,situacao,responsavel
