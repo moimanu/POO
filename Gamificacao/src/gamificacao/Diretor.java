@@ -20,7 +20,6 @@ public class Diretor extends Usuario {
         @Override
         public void menu(Sistema sistema) {
             Scanner t = new Scanner(System.in);
-
             System.out.println("\nO que deseja fazer?");
             System.out.println("1 - Cadastrar usuario");
             System.out.println("2 - Ver atividades");        

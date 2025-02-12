@@ -31,7 +31,6 @@ public class Membro extends Usuario implements Comparable<Membro> {
         @Override
         public void menu(Sistema sistema) {
             Scanner t = new Scanner(System.in);
-
             System.out.println("\nO que deseja fazer?");
             System.out.println("1 - Ver atividades");        
             System.out.println("2 - Ver classificacao");
