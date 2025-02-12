@@ -14,28 +14,29 @@ public class Atividade implements FormatacaoCSV {
         
     //Overriders
 
-    @Override
-    public String toString() {
-        return this.titulo + " | " + this.descricao + " | [" + this.valor + " pts]";
-    }
-    
-    @Override
-    public String retornarCSV() {
-        return this.titulo + "," + this.descricao + "," + this.valor;
-    }
-    
+        @Override
+        public String toString() {
+            return this.titulo + " | " + this.descricao + " | [" + this.valor + " pts]";
+        }
+
+        @Override
+        public String retornarCSV() {
+            return this.titulo + "," + this.descricao + "," + this.valor;
+        }
+    //
+        
     //Getters
 
-    public int getValor() {
-        return valor;
-    }
+        public int getValor() {
+            return valor;
+        }
 
-    public String getTitulo() {
-        return titulo;
-    }
+        public String getTitulo() {
+            return titulo;
+        }
 
-    public String getDescricao() {
-        return descricao;
-    }
-
+        public String getDescricao() {
+            return descricao;
+        }
+    //  
 }

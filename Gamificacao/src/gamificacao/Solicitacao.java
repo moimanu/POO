@@ -33,62 +33,65 @@ public class Solicitacao implements FormatacaoCSV {
     
     //Overriders
 
-    @Override
-    public String toString() {
-        return this.dataSolicitacao + 
-                " | Autor: " + this.autor.getNome() + 
-                " |" + this.atividade.getTitulo() + 
-                " | Valor: " + this.atividade.getValor() +
-                " | Valor sugerido: " + this.valorSugestao + 
-                (this.diretorResponsavel == null ? "" : " | Diretor(a) Responsavel: " + this.diretorResponsavel.getNome()) + 
-                (this.situacao == 0 ? " | Em aberto" :
-                this.situacao == 1 ? " | Aprovado com valor original" :
-                this.situacao == 2 ? " | Aprovado com sugestao" :
-                " | Negado");
-    }
-    
-    @Override
-    public String retornarCSV() {
-        return this.autor.getNome() + "," + this.atividade.getTitulo() + "," + 
-                this.dataSolicitacao + "," + this.valorSugestao + "," +
-                this.situacao + "," + 
-                (this.diretorResponsavel == null ? null : this.diretorResponsavel.getNome());
-    }
-    
+        @Override
+        public String toString() {
+            return this.dataSolicitacao + 
+                    " | Autor: " + this.autor.getNome() + 
+                    " |" + this.atividade.getTitulo() + 
+                    " | Valor: " + this.atividade.getValor() +
+                    " | Valor sugerido: " + this.valorSugestao + 
+                    (this.diretorResponsavel == null ? "" : " | Diretor(a) Responsavel: " + this.diretorResponsavel.getNome()) + 
+                    (this.situacao == 0 ? " | Em aberto" :
+                    this.situacao == 1 ? " | Aprovado com valor original" :
+                    this.situacao == 2 ? " | Aprovado com sugestao" :
+                    " | Negado");
+        }
+
+        @Override
+        public String retornarCSV() {
+            return this.autor.getNome() + "," + this.atividade.getTitulo() + "," + 
+                    this.dataSolicitacao + "," + this.valorSugestao + "," +
+                    this.situacao + "," + 
+                    (this.diretorResponsavel == null ? null : this.diretorResponsavel.getNome());
+        }
+    //
+        
     //Getters
     
-    public Membro getAutor() {
-        return autor;
-    }
+        public Membro getAutor() {
+            return autor;
+        }
 
-    public Atividade getAtividade() {
-        return atividade;
-    }
+        public Atividade getAtividade() {
+            return atividade;
+        }
 
-    public LocalDate getDataSolicitacao() {
-        return dataSolicitacao;
-    }
+        public LocalDate getDataSolicitacao() {
+            return dataSolicitacao;
+        }
 
-    public int getValorSugestao() {
-        return valorSugestao;
-    }
+        public int getValorSugestao() {
+            return valorSugestao;
+        }
 
-    public int getSituacao() {
-        return situacao;
-    }
+        public int getSituacao() {
+            return situacao;
+        }
 
-    public Diretor getDiretorResponsavel() {
-        return diretorResponsavel;
-    }
-    
+        public Diretor getDiretorResponsavel() {
+            return diretorResponsavel;
+        }
+    //
+        
     //Setters
 
-    public void setSituacao(int situacao) {
-        this.situacao = situacao;
-    }
+        public void setSituacao(int situacao) {
+            this.situacao = situacao;
+        }
 
-    public void setDiretorResponsavel(Diretor diretorResponsavel) {
-        this.diretorResponsavel = diretorResponsavel;
-    }
-    
+        public void setDiretorResponsavel(Diretor diretorResponsavel) {
+            this.diretorResponsavel = diretorResponsavel;
+        }
+    //
+        
 }

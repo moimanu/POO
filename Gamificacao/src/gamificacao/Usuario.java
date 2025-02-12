@@ -30,31 +30,34 @@ public abstract class Usuario implements FormatacaoCSV {
     
     public abstract void menu(Sistema sistema);
     
-    @Override
-    public String toString() {
-        return this.nome + " | " + this.email + " | " + this.diretoria;
-    }
+    //Overriders
     
+        @Override
+        public String toString() {
+            return this.nome + " | " + this.email + " | " + this.diretoria;
+        }
+    //
+        
     //Getters
 
-    public String getNome() {
-        return nome;
-    }
+        public String getNome() {
+            return nome;
+        }
 
-    public String getSenha() {
-        return senha;
-    }
+        public String getSenha() {
+            return senha;
+        }
 
-    public String getEmail() {
-        return email;
-    }
+        public String getEmail() {
+            return email;
+        }
 
-    public LocalDate getDataCadastro() {
-        return dataCadastro;
-    }
+        public LocalDate getDataCadastro() {
+            return dataCadastro;
+        }
 
-    public String getDiretoria() {
-        return diretoria;
-    }
-    
+        public String getDiretoria() {
+            return diretoria;
+        }
+    //
 }

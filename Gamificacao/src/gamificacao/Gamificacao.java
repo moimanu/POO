@@ -1,19 +1,18 @@
 package gamificacao;
 
 public class Gamificacao {
-    
+
     /* Resumo da main:
-    
-        novo sistema
+        new.sistema()
         while(true){
-            1 - realiza login
+            1 - login()
                 while(usuarioAtivo != null){
-                    apresenta menu do usuario ativo;
+                    usuarioAtivo.menu()
                 }
-            2 - fecha programa
+            2 - fechar programa
         }
     */
-
+    
     public static void main(String[] args) {
 
         Sistema sistema = new Sistema();
