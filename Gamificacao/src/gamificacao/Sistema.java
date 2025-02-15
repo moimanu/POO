@@ -19,7 +19,6 @@ public class Sistema {
     private ArrayList<Atividade> atividades;
     private ArrayList<Solicitacao> solicitacoes;
     private Usuario usuarioAtivo;
-    private LocalDate dataInicio;
     private Scanner t = new Scanner(System.in);
 
     public Sistema() {
